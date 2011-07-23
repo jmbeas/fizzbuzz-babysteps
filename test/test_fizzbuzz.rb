@@ -2,7 +2,7 @@ require "test/unit"
 require "shoulda"
 
 class FizzBuzz
-  def say(n)
+  def self.say(n)
     "1"
   end
 end
@@ -10,7 +10,7 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
-    FizzBuzz.new.say(n)
+    FizzBuzz.say(n)
   end
 
   should "say 1 for 1" do
