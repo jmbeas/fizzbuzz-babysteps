@@ -10,7 +10,7 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
-    "1"
+    FizzBuzz.new.say(n)
   end
 
   should "say 1 for 1" do
