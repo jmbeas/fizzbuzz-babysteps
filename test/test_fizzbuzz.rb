@@ -13,4 +13,8 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "1", FizzBuzz.say(1)
   end
 
+  should "say 2 for 2" do
+    assert_equal "2", FizzBuzz.say(2)
+  end
+
 end
