@@ -1,19 +1,16 @@
-= fizzbuzz
+= fizzbuzz step by step
 
-Description goes here.
+With this exercise I want to use FizzBuzz codekata
+in order to explore which are the forces that we
+have to take into account to guide our TDD. With 
+that goal in mind I want to design FizzBuzz with
+baby-steps and very focused on every refactor and
+the reason why I'm doing it.
 
-== Contributing to fizzbuzz
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+== NOTE
 
-== Copyright
+* The language used is Ruby
 
-Copyright (c) 2011 jmbeas. See LICENSE.txt for
-further details.
+* The skeleton of this project was created using 
+"jeweler"
 
