@@ -2,6 +2,9 @@ require "test/unit"
 require "shoulda"
 
 class FizzBuzz
+  def say(n)
+    "1"
+  end
 end
 
 class TestFizzbuzz < Test::Unit::TestCase
