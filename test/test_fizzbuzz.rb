@@ -10,14 +10,14 @@ class FizzBuzz
   end
   def self.say(n)
     result = ""
-    if fizzy? n and buzzy? n
-      return "FizzBuzz" 
-    end
     if fizzy? n
-      return "Fizz"
+      result = "Fizz"
     end
     if buzzy? n
-      return "Buzz" 
+      result = "Buzz" 
+    end
+    if fizzy? n and buzzy? n
+      result = "FizzBuzz" 
     end
     if result == ""
       result = n.to_s 
