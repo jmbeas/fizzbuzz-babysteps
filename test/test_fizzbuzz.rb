@@ -9,9 +9,15 @@ class FizzBuzz
     n % 5 == 0
   end
   def self.say(n)
-    return "FizzBuzz" if fizzy? n and buzzy? n
-    return "Fizz" if fizzy? n
-    return "Buzz" if buzzy? n
+    if fizzy? n and buzzy? n
+      return "FizzBuzz" 
+    end
+    if fizzy? n
+      return "Fizz"
+    end
+    if buzzy? n
+      return "Buzz" 
+    end
     n.to_s 
   end
 end
