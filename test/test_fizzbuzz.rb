@@ -18,8 +18,7 @@ class FizzBuzz
   end
   def self.say(n)
     result = ""
-    result = sayFizzWhenFizzy n
-    result += sayBuzzWhenBuzzy n
+    result = sayFizzWhenFizzy(n) + sayBuzzWhenBuzzy(n)
     if result == ""
       result = n.to_s 
     end
