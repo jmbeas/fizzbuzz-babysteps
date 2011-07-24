@@ -11,6 +11,7 @@ the reason why I'm doing it.
 
 * The language used is Ruby
 
-* The skeleton of this project was created using 
-"jeweler"
+* The skeleton of this project was created using "jeweler"
+
+* Use "rake test" to run the tests
 
