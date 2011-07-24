@@ -16,11 +16,14 @@ class FizzBuzz
     return "Buzz" if buzzy? n
     ""
   end
+  def self.sayNumber(n)
+    return n.to_s
+  end
   def self.say(n)
     result = ""
     result = sayFizzWhenFizzy(n) + sayBuzzWhenBuzzy(n)
     if result == ""
-      result = n.to_s 
+      result = sayNumber(n)
     end
     result
   end
