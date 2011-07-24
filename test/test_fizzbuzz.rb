@@ -8,11 +8,13 @@ class FizzBuzz
   def self.buzzy?(n)
     n % 5 == 0
   end
+  def self.sayFizzWhenFizzy(n)
+    return "Fizz" if fizzy? n
+    ""
+  end
   def self.say(n)
     result = ""
-    if fizzy? n
-      result = "Fizz"
-    end
+    result = sayFizzWhenFizzy n
     if buzzy? n
       result = "Buzz" 
     end
