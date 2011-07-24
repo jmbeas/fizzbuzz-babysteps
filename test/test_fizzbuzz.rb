@@ -2,8 +2,11 @@ require "test/unit"
 require "shoulda"
 
 class FizzBuzz
+  def self.fizzable?(n)
+    n % 3 == 0
+  end
   def self.say(n)
-    return "Fizz" if n % 3 == 0
+    return "Fizz" if fizzable? n
     return "Buzz" if n == 5
     n.to_s 
   end
