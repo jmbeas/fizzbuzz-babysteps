@@ -2,16 +2,16 @@ require "test/unit"
 require "shoulda"
 
 class FizzBuzz
-  def self.fizzable?(n)
+  def self.fizzy?(n)
     n % 3 == 0
   end
-  def self.buzzable?(n)
+  def self.buzzy?(n)
     n % 5 == 0
   end
   def self.say(n)
-    return "FizzBuzz" if fizzable? n and buzzable? n
-    return "Fizz" if fizzable? n
-    return "Buzz" if buzzable? n
+    return "FizzBuzz" if fizzy? n and buzzy? n
+    return "Fizz" if fizzy? n
+    return "Buzz" if buzzy? n
     n.to_s 
   end
 end
