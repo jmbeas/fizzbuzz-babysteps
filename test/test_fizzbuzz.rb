@@ -19,8 +19,9 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "2", FizzBuzz.say(2)
   end
 
-  should "say Fizz for 3" do
+  should "say Fizz for multiples of 3" do
     assert_equal "Fizz", FizzBuzz.say(3)
+    assert_equal "Fizz", FizzBuzz.say(6)
   end
 
   should "say 4 for 4" do
