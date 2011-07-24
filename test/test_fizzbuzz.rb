@@ -22,9 +22,7 @@ class FizzBuzz
   def self.say(n)
     result = ""
     result = sayFizzWhenFizzy(n) + sayBuzzWhenBuzzy(n)
-    if result == ""
-      result = sayNumber(n)
-    end
+    result = sayNumber(n) if result == ""
     result
   end
 end
