@@ -7,7 +7,7 @@ class FizzBuzz
   end
   def self.say(n)
     return "Fizz" if fizzable? n
-    return "Buzz" if n == 5
+    return "Buzz" if n % 5 == 0
     n.to_s 
   end
 end
