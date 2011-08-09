@@ -4,6 +4,7 @@ require "shoulda"
 class FizzBuzz
   def self.say(n)
     return "Fizz" if n == 3
+    return "Buzz" if n == 5
     n.to_s
   end
 end
