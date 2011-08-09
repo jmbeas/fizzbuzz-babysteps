@@ -26,4 +26,8 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "4", FizzBuzz.say(4)
   end
 
+  should "say Buzz for 5" do
+    assert_equal "Buzz", FizzBuzz.say(5)
+  end
+
 end
