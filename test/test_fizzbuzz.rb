@@ -3,9 +3,12 @@ require "shoulda"
 
 class TestFizzbuzz < Test::Unit::TestCase
 
+  MESSAGE_WHEN_NUMBER_IS_FIZZY = "Fizz"
+  MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
+
   def say(n)
-    return "Fizz" if n == 3
-    return "Buzz" if n == 5
+    return MESSAGE_WHEN_NUMBER_IS_FIZZY if n == 3
+    return MESSAGE_WHEN_NUMBER_IS_BUZZY if n == 5
     n.to_s
   end
 
