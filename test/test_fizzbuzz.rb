@@ -1,7 +1,8 @@
-require 'helper'
+require "test/unit"
+require "shoulda"
 
 class TestFizzbuzz < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  should "say 1 for 1" do
+    assert_equal "1", say(1)
   end
 end
