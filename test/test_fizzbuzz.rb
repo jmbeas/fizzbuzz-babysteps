@@ -12,6 +12,10 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "Fizz", say(3)
   end
 
+  should "say Buzz for 5" do
+    assert_equal "Buzz", say(5)
+  end
+
   should "say the number for any other case (default rule)" do
     assert_equal "1", say(1)
     assert_equal "2", say(2)
