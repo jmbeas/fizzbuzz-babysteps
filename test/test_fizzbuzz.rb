@@ -4,6 +4,7 @@ require "shoulda"
 class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
+    return "Fizz" if n == 3
     return "2" if n == 2
     "1"
   end
