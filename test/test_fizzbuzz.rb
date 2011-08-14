@@ -42,11 +42,12 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def setup
-    @rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
+    rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
+    @fizzbuzz = FizzBuzz.new(rules)
   end
 
   def say(n)
-    FizzBuzz.new(@rules).say(n)
+    @fizzbuzz.say(n)
   end
 
   should "say Fizz for 3" do
