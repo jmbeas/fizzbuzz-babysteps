@@ -7,13 +7,17 @@ class FizzRule
   end
 end
 
-class TestFizzbuzz < Test::Unit::TestCase
+class BuzzRule
+  def message
+    "Buzz"
+  end
+end
 
-  MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
+class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
     return FizzRule.new.message if n == 3
-    return MESSAGE_WHEN_NUMBER_IS_BUZZY if n == 5
+    return BuzzRule.new.message if n == 5
     n.to_s
   end
 
