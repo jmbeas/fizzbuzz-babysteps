@@ -32,9 +32,9 @@ class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
     rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
-    return rules[0].message(n) if rules[0].eval(n)
-    return rules[1].message(n) if rules[1].eval(n)
-    return rules[2].message(n) if rules[2].eval(n)
+    rules.each do |rule|
+      return rule.message(n) if rule.eval(n)
+    end
   end
 
   should "say Fizz for 3" do
