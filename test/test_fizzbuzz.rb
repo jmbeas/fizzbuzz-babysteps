@@ -3,7 +3,7 @@ require "shoulda"
 
 class FizzRule
   def eval(n)
-    n == 3
+    n % 3 == 0
   end
   def message(n)
     "Fizz"
