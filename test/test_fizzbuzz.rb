@@ -1,6 +1,12 @@
 require "test/unit"
 require "shoulda"
 
+class FizzRule
+  def eval(n)
+    n == 3
+  end
+end
+
 class TestFizzbuzz < Test::Unit::TestCase
 
   MESSAGE_WHEN_NUMBER_IS_FIZZY = "Fizz"
@@ -19,7 +25,7 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def is_fizzy? (n)
-    n == 3
+    FizzRule.new.eval(n)
   end
 
   def is_buzzy? (n)
