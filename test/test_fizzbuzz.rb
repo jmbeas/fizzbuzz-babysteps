@@ -13,12 +13,18 @@ class BuzzRule
   end
 end
 
+class DefaultRule
+  def message(value)
+    value.to_s
+  end
+end
+
 class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
     return FizzRule.new.message if n == 3
     return BuzzRule.new.message if n == 5
-    n.to_s
+    DefaultRule.new.message(n)
   end
 
   should "say Fizz for 3" do
