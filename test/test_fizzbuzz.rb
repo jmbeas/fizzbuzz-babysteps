@@ -2,13 +2,13 @@ require "test/unit"
 require "shoulda"
 
 class FizzRule
-  def message
+  def message(value)
     "Fizz"
   end
 end
 
 class BuzzRule
-  def message
+  def message(value)
     "Buzz"
   end
 end
@@ -22,8 +22,8 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
-    return FizzRule.new.message if n == 3
-    return BuzzRule.new.message if n == 5
+    return FizzRule.new.message(n) if n == 3
+    return BuzzRule.new.message(n) if n == 5
     DefaultRule.new.message(n)
   end
 
