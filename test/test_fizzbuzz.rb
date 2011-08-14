@@ -12,7 +12,6 @@ end
 
 class TestFizzbuzz < Test::Unit::TestCase
 
-  MESSAGE_WHEN_NUMBER_IS_FIZZY = "Fizz"
   MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
 
   def message_when_number_is_fizzy(n)
