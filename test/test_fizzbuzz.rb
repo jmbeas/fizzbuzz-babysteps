@@ -14,20 +14,12 @@ class TestFizzbuzz < Test::Unit::TestCase
 
   MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
 
-  def message_when_number_is_fizzy(n)
-    FizzRule.new.message(n)
-  end
-
   def message_when_number_is_buzzy(n)
     MESSAGE_WHEN_NUMBER_IS_BUZZY
   end
 
   def message_when_default_case(n)
     n.to_s
-  end
-
-  def is_fizzy? (n)
-    n == 3
   end
 
   def is_buzzy? (n)
