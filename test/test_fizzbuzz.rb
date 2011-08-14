@@ -27,7 +27,7 @@ class FizzBuzzRule
     @rules.inject(true) {|result,rule| result and rule.eval(n)}
   end
   def message(n)
-    "FizzBuzz"
+    @rules.inject("") {|result,rule| result += rule.message(n)}
   end
 end
 
