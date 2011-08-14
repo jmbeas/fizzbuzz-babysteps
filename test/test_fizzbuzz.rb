@@ -22,9 +22,13 @@ class TestFizzbuzz < Test::Unit::TestCase
     n == 3
   end
 
+  def is_buzzy? (n)
+    n == 5
+  end
+
   def say(n)
     return message_when_number_is_fizzy if is_fizzy? n
-    return message_when_number_is_buzzy if n == 5
+    return message_when_number_is_buzzy if is_buzzy? n
     message_when_default_case(n)
   end
 
