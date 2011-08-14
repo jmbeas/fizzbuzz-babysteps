@@ -19,6 +19,15 @@ class BuzzRule
   end
 end
 
+class FizzBuzzRule
+  def eval(n)
+    n == 15
+  end
+  def message(n)
+    "FizzBuzz"
+  end
+end
+
 class DefaultRule
   def eval(n)
     true
@@ -42,7 +51,7 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def setup
-    rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
+    rules = [FizzRule.new,BuzzRule.new,FizzBuzzRule.new,DefaultRule.new]
     @fizzbuzz = FizzBuzz.new(rules)
   end
 
