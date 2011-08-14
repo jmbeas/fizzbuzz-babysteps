@@ -39,7 +39,8 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def say(n)
-    return message_when_number_is_fizzy(n) if is_fizzy? n
+    fizzrule = FizzRule.new
+    return fizzrule.message(n) if fizzrule.eval(n)
     return message_when_number_is_buzzy(n) if is_buzzy? n
     return message_when_default_case(n) if is_default_case? n
   end
