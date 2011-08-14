@@ -6,9 +6,17 @@ class TestFizzbuzz < Test::Unit::TestCase
   MESSAGE_WHEN_NUMBER_IS_FIZZY = "Fizz"
   MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
 
+  def message_when_number_is_fizzy
+    MESSAGE_WHEN_NUMBER_IS_FIZZY
+  end
+
+  def message_when_number_is_buzzy
+    MESSAGE_WHEN_NUMBER_IS_BUZZY
+  end
+
   def say(n)
-    return MESSAGE_WHEN_NUMBER_IS_FIZZY if n == 3
-    return MESSAGE_WHEN_NUMBER_IS_BUZZY if n == 5
+    return message_when_number_is_fizzy if n == 3
+    return message_when_number_is_buzzy if n == 5
     n.to_s
   end
 
