@@ -29,8 +29,11 @@ class DefaultRule
 end
 
 class FizzBuzz
-  def say(n,rules)
-    rules.each do |rule|
+  def initialize(rules)
+    @rules = rules
+  end
+  def say(n)
+    @rules.each do |rule|
       return rule.message(n) if rule.eval(n)
     end
   end
@@ -43,7 +46,7 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def say(n)
-    FizzBuzz.new.say(n,@rules)
+    FizzBuzz.new(@rules).say(n)
   end
 
   should "say Fizz for 3" do
