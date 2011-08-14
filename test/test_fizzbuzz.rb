@@ -5,6 +5,9 @@ class FizzRule
   def eval(n)
     n == 3
   end
+  def message(n)
+    "Fizz"
+  end
 end
 
 class TestFizzbuzz < Test::Unit::TestCase
@@ -13,7 +16,7 @@ class TestFizzbuzz < Test::Unit::TestCase
   MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
 
   def message_when_number_is_fizzy(n)
-    MESSAGE_WHEN_NUMBER_IS_FIZZY
+    FizzRule.new.message(n)
   end
 
   def message_when_number_is_buzzy(n)
@@ -25,7 +28,7 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def is_fizzy? (n)
-    FizzRule.new.eval(n)
+    n == 3
   end
 
   def is_buzzy? (n)
