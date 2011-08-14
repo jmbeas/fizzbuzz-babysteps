@@ -1,12 +1,21 @@
 require "test/unit"
 require "shoulda"
 
-class FizzRule
+class SimpleRule
+  def initialize(divisor,message)
+    @divisor = divisor
+    @message = message
+  end
   def eval(n)
-    n % 3 == 0
+    n % @divisor == 0
   end
   def message(n)
-    "Fizz"
+    @message
+  end
+end
+class FizzRule < SimpleRule
+  def initialize
+    super(3,"Fizz")
   end
 end
 
