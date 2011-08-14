@@ -20,8 +20,11 @@ class BuzzRule
 end
 
 class FizzBuzzRule
+  def initialize
+    @rules = [FizzRule.new, BuzzRule.new]
+  end
   def eval(n)
-    n % 15 == 0
+    @rules.inject(true) {|result,rule| result and rule.eval(n)}
   end
   def message(n)
     "FizzBuzz"
