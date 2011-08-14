@@ -10,20 +10,19 @@ class FizzRule
   end
 end
 
-class TestFizzbuzz < Test::Unit::TestCase
-
-  MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
-
-  def message_when_number_is_buzzy(n)
-    MESSAGE_WHEN_NUMBER_IS_BUZZY
+class BuzzRule
+  def eval(n)
+    n == 5
   end
+  def message(n)
+    "Buzz"
+  end
+end
+
+class TestFizzbuzz < Test::Unit::TestCase
 
   def message_when_default_case(n)
     n.to_s
-  end
-
-  def is_buzzy? (n)
-    n == 5
   end
 
   def is_default_case? (n)
@@ -31,10 +30,9 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def say(n)
-    rules = [FizzRule.new]
-    fizzrule = rules[0]
-    return fizzrule.message(n) if fizzrule.eval(n)
-    return message_when_number_is_buzzy(n) if is_buzzy? n
+    rules = [FizzRule.new,BuzzRule.new]
+    return rules[0].message(n) if rules[0].eval(n)
+    return rules[1].message(n) if rules[1].eval(n)
     return message_when_default_case(n) if is_default_case? n
   end
 
