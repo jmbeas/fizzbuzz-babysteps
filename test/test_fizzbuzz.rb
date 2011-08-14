@@ -26,10 +26,14 @@ class TestFizzbuzz < Test::Unit::TestCase
     n == 5
   end
 
+  def is_default_case? (n)
+    true
+  end
+
   def say(n)
     return message_when_number_is_fizzy if is_fizzy? n
     return message_when_number_is_buzzy if is_buzzy? n
-    message_when_default_case(n)
+    return message_when_default_case(n) if is_default_case? n
   end
 
   should "say Fizz for 3" do
