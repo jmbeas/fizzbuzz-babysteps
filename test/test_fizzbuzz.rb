@@ -19,21 +19,22 @@ class BuzzRule
   end
 end
 
-class TestFizzbuzz < Test::Unit::TestCase
-
-  def message_when_default_case(n)
-    n.to_s
-  end
-
-  def is_default_case? (n)
+class DefaultRule
+  def eval(n)
     true
   end
+  def message(n)
+    n.to_s
+  end
+end
+
+class TestFizzbuzz < Test::Unit::TestCase
 
   def say(n)
-    rules = [FizzRule.new,BuzzRule.new]
+    rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
     return rules[0].message(n) if rules[0].eval(n)
     return rules[1].message(n) if rules[1].eval(n)
-    return message_when_default_case(n) if is_default_case? n
+    return rules[2].message(n) if rules[2].eval(n)
   end
 
   should "say Fizz for 3" do
