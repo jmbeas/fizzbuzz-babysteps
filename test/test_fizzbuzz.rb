@@ -13,18 +13,16 @@ class SimpleRule
     @message
   end
 end
+
 class FizzRule < SimpleRule
   def initialize
     super(3,"Fizz")
   end
 end
 
-class BuzzRule
-  def eval(n)
-    n % 5 == 0
-  end
-  def message(n)
-    "Buzz"
+class BuzzRule < SimpleRule
+  def initialize
+    super(5,"Buzz")
   end
 end
 
