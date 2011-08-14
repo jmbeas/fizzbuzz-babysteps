@@ -51,7 +51,7 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def setup
-    rules = [FizzRule.new,BuzzRule.new,FizzBuzzRule.new,DefaultRule.new]
+    rules = [FizzBuzzRule.new,FizzRule.new,BuzzRule.new,DefaultRule.new]
     @fizzbuzz = FizzBuzz.new(rules)
   end
 
