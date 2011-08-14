@@ -1,19 +1,25 @@
 require "test/unit"
 require "shoulda"
 
-class FizzRule
+class TranslationRule
+  def message
+    raise 'This method should be overriden'
+  end
+end
+
+class FizzRule < TranslationRule
   def message(value)
     "Fizz"
   end
 end
 
-class BuzzRule
+class BuzzRule < TranslationRule
   def message(value)
     "Buzz"
   end
 end
 
-class DefaultRule
+class DefaultRule < TranslationRule
   def message(value)
     value.to_s
   end
