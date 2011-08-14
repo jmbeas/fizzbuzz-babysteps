@@ -60,6 +60,10 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "Buzz", say(10)
   end
 
+  should "say FizzBuzz for 15" do
+    assert_equal "FizzBuzz", say(15)
+  end
+
   should "say the number for any other case (default rule)" do
     assert_equal "1", say(1)
     assert_equal "2", say(2)
