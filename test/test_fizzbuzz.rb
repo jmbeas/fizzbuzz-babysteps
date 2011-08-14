@@ -69,8 +69,9 @@ class TestFizzbuzz < Test::Unit::TestCase
     assert_equal "Buzz", say(10)
   end
 
-  should "say FizzBuzz for 15" do
+  should "say FizzBuzz for multiples of 3 and 5" do
     assert_equal "FizzBuzz", say(15)
+    assert_equal "FizzBuzz", say(30)
   end
 
   should "say the number for any other case (default rule)" do
