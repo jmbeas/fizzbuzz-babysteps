@@ -1,13 +1,18 @@
 require "test/unit"
 require "shoulda"
 
+class FizzRule
+  def message
+    "Fizz"
+  end
+end
+
 class TestFizzbuzz < Test::Unit::TestCase
 
-  MESSAGE_WHEN_NUMBER_IS_FIZZY = "Fizz"
   MESSAGE_WHEN_NUMBER_IS_BUZZY = "Buzz"
 
   def say(n)
-    return MESSAGE_WHEN_NUMBER_IS_FIZZY if n == 3
+    return FizzRule.new.message if n == 3
     return MESSAGE_WHEN_NUMBER_IS_BUZZY if n == 5
     n.to_s
   end
