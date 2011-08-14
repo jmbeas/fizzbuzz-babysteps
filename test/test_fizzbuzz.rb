@@ -37,13 +37,9 @@ class FizzBuzz
 end
 class TestFizzbuzz < Test::Unit::TestCase
 
-  def return_message_for_rule_that_matches(n,rules)
-    FizzBuzz.new.say(n,rules)
-  end
-
   def say(n)
     rules = [FizzRule.new,BuzzRule.new,DefaultRule.new]
-    return_message_for_rule_that_matches(n,rules)
+    FizzBuzz.new.say(n,rules)
   end
 
   should "say Fizz for 3" do
