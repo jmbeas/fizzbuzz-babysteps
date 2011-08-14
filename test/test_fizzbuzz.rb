@@ -28,12 +28,17 @@ class DefaultRule
   end
 end
 
-class TestFizzbuzz < Test::Unit::TestCase
-
-  def return_message_for_rule_that_matches(n,rules)
+class FizzBuzz
+  def say(n,rules)
     rules.each do |rule|
       return rule.message(n) if rule.eval(n)
     end
+  end
+end
+class TestFizzbuzz < Test::Unit::TestCase
+
+  def return_message_for_rule_that_matches(n,rules)
+    FizzBuzz.new.say(n,rules)
   end
 
   def say(n)
