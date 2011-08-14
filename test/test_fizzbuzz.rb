@@ -21,7 +21,7 @@ end
 
 class FizzBuzzRule
   def eval(n)
-    n == 15
+    n % 15 == 0
   end
   def message(n)
     "FizzBuzz"
