@@ -20,17 +20,14 @@ class BuzzRule
 end
 
 class CompositionRule
+  def initialize(rules)
+    @rules = rules
+  end
   def eval(n)
     @rules.inject(true) {|result,rule| result and rule.eval(n)}
   end
   def message(n)
     @rules.inject("") {|result,rule| result += rule.message(n)}
-  end
-end
-
-class FizzBuzzRule < CompositionRule
-  def initialize
-    @rules = [FizzRule.new, BuzzRule.new]
   end
 end
 
@@ -57,7 +54,7 @@ end
 class TestFizzbuzz < Test::Unit::TestCase
 
   def setup
-    rules = [FizzBuzzRule.new,FizzRule.new,BuzzRule.new,DefaultRule.new]
+    rules = [CompositionRule.new([FizzRule.new,BuzzRule.new]),FizzRule.new,BuzzRule.new,DefaultRule.new]
     @fizzbuzz = FizzBuzz.new(rules)
   end
 
