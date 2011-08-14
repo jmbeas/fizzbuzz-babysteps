@@ -50,8 +50,9 @@ class TestFizzbuzz < Test::Unit::TestCase
     @fizzbuzz.say(n)
   end
 
-  should "say Fizz for 3" do
+  should "say Fizz for multiples of 3" do
     assert_equal "Fizz", say(3)
+    assert_equal "Fizz", say(6)
   end
 
   should "say Buzz for 5" do
